@@ -8,8 +8,8 @@ flake and provide:
 * NixOS config modules
 * Dev shell (`nix develop`) containing the same deps list as the packages.
 
-This repo needs a code review to config to verify my understanding, which is
-part of the purpose of creating it.
+This repo needs a code review to verify my understanding, which is part of the
+purpose of creating it.
 
 Useful Commands
 ---------------
