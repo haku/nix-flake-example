@@ -1,11 +1,12 @@
 Work In Progress
 ================
 
-This aims to be an example repo showing how to package a project for nix and provide:
+This aims to be an example repo showing how to package a project for nix as a
+flake and provide:
 
-* Nix package
-* NixOS config module
-* Dev shell (`nix develop`) containing the same deps list as the package.
+* Nix packages
+* NixOS config modules
+* Dev shell (`nix develop`) containing the same deps list as the packages.
 
 This repo needs a code review to config to verify my understanding, which is
 part of the purpose of creating it.
