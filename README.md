@@ -2,7 +2,7 @@ Work In Progress
 ================
 
 This aims to be an example repo showing how to package a project for nix as a
-flake and provide:
+flake using [flake.parts](https://flake.parts) and provide:
 
 * Nix packages
 * NixOS config modules
