@@ -35,7 +35,7 @@ nix-flake-example = {
 
 Add the module in `inputs.nixpkgs.lib.nixosSystem`:
 
-```
+```nix
 modules = [
   inputs.nix-flake-example.nixosModules.hello-world
 ];
@@ -43,7 +43,7 @@ modules = [
 
 Configure the service:
 
-```
+```nix
 services.hello-world = {
   enable = true;
   port = 9999;
