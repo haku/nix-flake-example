@@ -15,7 +15,7 @@
         inputs.make-shell.flakeModules.default
         ./packages.nix
       ];
-      flake.nixosModules.server = moduleWithSystem (
+      flake.nixosModules.hello-world = moduleWithSystem (
         perSystem@{ config, self', ... }: import ./hello-world-module.nix perSystem
       );
       systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin" ];

@@ -19,3 +19,32 @@ nix flake check
 nix build "#hello-world"
 nix develop
 ```
+
+How this can be used in a system flake
+--------------------------------------
+
+Add flake input:
+
+```nix
+nix-flake-example = {
+ url = "github:haku/nix-flake-example";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+```
+
+Add the module in `inputs.nixpkgs.lib.nixosSystem`:
+
+```
+modules = [
+  inputs.nix-flake-example.nixosModules.hello-world
+];
+```
+
+Configure the service:
+
+```
+services.hello-world = {
+  enable = true;
+  port = 9999;
+};
+```
