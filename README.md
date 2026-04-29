@@ -1,5 +1,5 @@
-Work In Progress
-================
+Needs Review
+============
 
 This aims to be an example repo showing how to package a project for nix as a
 flake using [flake.parts](https://flake.parts) and provide:
