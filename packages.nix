@@ -18,7 +18,7 @@
         mkdir -p "$sp" "$bin"
         install -m644 *.py "$sp"
 
-        makeWrapper "${lib.getExe server-env}" $bin/${name} --add-flags "$sp/hello-world.py"
+        makeWrapper "${lib.getExe server-env}" $bin/${name} --add-flags "$sp/server.py"
 
         runHook postInstall
       '';
