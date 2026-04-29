@@ -3,7 +3,7 @@
   perSystem = { pkgs, lib, ... }:
   let
     server-env = (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
-      # package deps go here.
+      # python dep packages go here.
     ]));
     hello-world-package = pkgs.stdenv.mkDerivation rec {
       name = "hello-world";
@@ -18,7 +18,7 @@
         mkdir -p "$sp" "$bin"
         install -m644 *.py "$sp"
 
-        makeWrapper "${lib.getExe server-env}" $bin/hello-world --add-flags "$sp/hello-world.py"
+        makeWrapper "${lib.getExe server-env}" $bin/${name} --add-flags "$sp/hello-world.py"
 
         runHook postInstall
       '';
@@ -29,7 +29,6 @@
     packages = {
       hello-world = hello-world-package;
     };
-
     make-shells.default = {
       packages = [
         server-env

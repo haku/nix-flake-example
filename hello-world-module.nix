@@ -10,7 +10,7 @@ in
 
     address = mkOption {
       description = "Address to bind to.";
-      type = types.str;
+      type = types.nullOr types.str;
       default = null;
     };
 
@@ -27,7 +27,7 @@ in
       requires = [ "network-online.target" ];
       wantedBy = [ "default.target" ];
       serviceConfig = {
-        ExecStart = lib.escapeShellArgs(
+        ExecStart = escapeShellArgs(
           [
             "${getExe perSystem.self'.packages.hello-world}"
             "--port" cfg.port
