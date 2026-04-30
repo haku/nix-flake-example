@@ -37,7 +37,7 @@ Add the module in `inputs.nixpkgs.lib.nixosSystem`:
 
 ```nix
 modules = [
-  inputs.nix-flake-example.nixosModules.hello-world
+  inputs.nix-flake-example.nixosModules.default
 ];
 ```
 

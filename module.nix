@@ -1,6 +1,6 @@
 { withSystem, moduleWithSystem, inputs, ... }:
 {
-  flake.nixosModules.hello-world = moduleWithSystem (perSystem@{ config, self', ... }:
+  flake.nixosModules.default = moduleWithSystem (perSystem@{ config, self', ... }:
   { pkgs, lib, config, ... }:
   with lib;
   let
